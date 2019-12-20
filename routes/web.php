@@ -26,5 +26,6 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.','namespace' => 'admin'], funct
     });
 
     Route::get('/employee/index',"EmployeeController@index");
+    Route::post('/employee/storeEmployee',"EmployeeController@storeEmployee");
 
 });

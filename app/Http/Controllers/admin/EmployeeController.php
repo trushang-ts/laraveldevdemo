@@ -17,16 +17,16 @@ class EmployeeController extends Controller
         return view('devices.create');
     }
  
-    public function storeDevice(){
- 
-        $device = new Device();
- 
-        $device->name = request('name');
-        $device->description = request('description');
- 
-        $device->save();
- 
-        return redirect('/devices');
- 
+    public function storeEmployee(Request $request){
+        
+        $employee = new Employee();
+        $employee->firstname = $request->input('firstname');
+        $employee->lastname = $request->input('lastname');
+        //$employee->role = $request->input('role');
+        $employee->email = $request->input('email');
+        $employee->username = $request->input('username');
+        $employee->password = $request->input('password');
+        $employee->save();
+        return redirect('/admin/users'); 
     }
 }
