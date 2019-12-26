@@ -59,3 +59,5 @@
     height: calc(100vh - 70px);
     margin-top: 70px;
   }
+
+ #doLogin label.error {width: 100%;margin-left: 15%;margin-top: 3%;}
